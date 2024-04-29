@@ -1,0 +1,17 @@
+<!-- track_service_request.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Track Service Request</title>
+</head>
+<body>
+    <h1>Service Request Details</h1>
+    <p>Request Type: {{ request.request_type }}</p>
+    <p>Details: {{ request.details }}</p>
+    <p>Status: {{ request.status }}</p>
+    {% if request.status == 'Resolved' %}
+        <p>Resolved At: {{ request.resolved_at }}</p>
+    {% endif %}
+</body>
+</html>

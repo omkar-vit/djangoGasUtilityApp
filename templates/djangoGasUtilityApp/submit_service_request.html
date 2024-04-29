@@ -1,0 +1,21 @@
+<!-- submit_service_request.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Service Request</title>
+</head>
+<body>
+    <h1>Submit Service Request</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="request_type">Request Type:</label>
+        <input type="text" name="request_type" id="request_type"><br>
+        <label for="details">Details:</label><br>
+        <textarea name="details" id="details"></textarea><br>
+        <label for="attachment">Attachment:</label>
+        <input type="file" name="attachment" id="attachment"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

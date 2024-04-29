@@ -1,0 +1,23 @@
+<!-- manage_support_tickets.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Support Tickets</title>
+</head>
+<body>
+    <h1>Support Tickets</h1>
+    <ul>
+        {% for ticket in tickets %}
+            <li>
+                <p>Request ID: {{ ticket.service_request.id }}</p>
+                <p>Request Type: {{ ticket.service_request.request_type }}</p>
+                <p>Status: {{ ticket.service_request.status }}</p>
+                <p>Support Rep: {{ ticket.support_rep.username }}</p>
+                <p>Notes: {{ ticket.notes }}</p>
+                <p>Created At: {{ ticket.created_at }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
